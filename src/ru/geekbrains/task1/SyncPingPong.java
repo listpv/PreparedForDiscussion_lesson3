@@ -2,7 +2,11 @@ package ru.geekbrains.task1;
 
 public class SyncPingPong {
 
-    private boolean flag = false;
+    private boolean flag;
+
+    public SyncPingPong() {
+        this.flag = false;
+    }
 
     public synchronized void doPong(){
         while (!flag){

@@ -6,8 +6,13 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Counter {
 
-    private  Lock lock = new ReentrantLock();
-    private long counter = 0l;
+    private  Lock lock;
+    private long counter;
+
+    public Counter() {
+        this.lock = new ReentrantLock();
+        this.counter = 0l;
+    }
 
     public void increaseCounter(){
         try {
